@@ -12,7 +12,7 @@ setup(
     name='Flask-Redis',
     version=version,
     url='https://github.com/satori/flask-redis',
-    download_url='http://cloud.github.com/downloads/satori/flask-redis/Flask-Redis-%s.tar.gz',
+    download_url='http://cloud.github.com/downloads/satori/flask-redis/Flask-Redis-%s.tar.gz' % version,
     license='BSD',
     author='Maxim Bublis',
     author_email='b@codemonkey.ru',
