@@ -6,10 +6,13 @@ redis-py library.
 """
 from setuptools import setup
 
+version = '0.1'
+
 setup(
     name='Flask-Redis',
-    version='0.1',
+    version=version,
     url='https://github.com/satori/flask-redis',
+    download_url='http://cloud.github.com/downloads/satori/flask-redis/Flask-Redis-%s.tar.gz'
     license='BSD',
     author='Maxim Bublis',
     author_email='b@codemonkey.ru',
