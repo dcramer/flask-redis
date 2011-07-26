@@ -21,6 +21,7 @@ class Redis(object):
         app.config.setdefault('REDIS_HOST', 'localhost')
         app.config.setdefault('REDIS_PORT', 6379)
         app.config.setdefault('REDIS_DB', 0)
+        app.config.setdefault('REDIS_PASSWORD', None)
 
         app.before_request(self.before_request)
 
@@ -29,7 +30,8 @@ class Redis(object):
     def connect(self):
         return redis.Redis(host=self.app.config['REDIS_HOST'],
                            port=self.app.config['REDIS_PORT'],
-                           db=self.app.config['REDIS_DB'])
+                           db=self.app.config['REDIS_DB'],
+                           password=self.app.config['REDIS_PASSWORD'])
 
     def before_request(self):
         g.redis = self.connect()
